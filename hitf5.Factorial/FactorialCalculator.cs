@@ -24,5 +24,10 @@ namespace hitf5.Factorial
         {
             return value - 1;
         }
+
+        //public override string ToString()
+        //{
+        //    return "ToString";
+        //}
     }
 }
