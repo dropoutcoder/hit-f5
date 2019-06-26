@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace hitf5.Factorial
 {
-    //[DebuggerDisplay("Minimum je {minimum}")]
+    //[DebuggerDisplay("FactorialCalculator s minimem {minimum}.")]
     public class FactorialCalculator : IFactorialCalculator
     {
         private static readonly int minimum = 1;
@@ -16,13 +16,13 @@ namespace hitf5.Factorial
             }
             else
             {
-                return value * this.Calculate(value - 1);
+                return value * this.Calculate(this.GetNext(value));
             }
         }
 
-        public override string ToString()
+        private int GetNext(int value)
         {
-            return nameof(base.ToString);
+            return value - 1;
         }
     }
 }
