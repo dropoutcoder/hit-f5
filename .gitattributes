@@ -61,3 +61,10 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+###############################################################################
+# exclude files except those with cs file extension from repository language detection
+###############################################################################
+
+* linguist-vendored
+*.cs linguist-vendored=false
