@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\hitf5.Factorial\hitf5.Factorial.csproj" />
+    <ProjectReference Include="..\HitF5.Factorial\HitF5.Factorial.csproj" />
   </ItemGroup>
 
 </Project>
