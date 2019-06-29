@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HitF5.Factorial\HitF5.Factorial.csproj" />
+    <ProjectReference Include="..\hitf5.Factorial\hitf5.Factorial.csproj" />
   </ItemGroup>
 
 </Project>
