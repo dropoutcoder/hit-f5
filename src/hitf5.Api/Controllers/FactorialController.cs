@@ -1,8 +1,8 @@
-﻿using hitf5.Factorial;
+﻿using HitF5.Factorial;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace hitf5.Api.Controllers
+namespace HitF5.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

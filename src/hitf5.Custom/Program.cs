@@ -1,8 +1,8 @@
-﻿using hitf5.Factorial;
+﻿using HitF5.Factorial;
 using System;
 using System.Threading.Tasks;
 
-namespace hitf5.Custom
+namespace HitF5.Custom
 {
     class Program
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace hitf5.Api
+namespace HitF5.Api
 {
     public class Program
     {

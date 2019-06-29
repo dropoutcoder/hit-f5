@@ -1,4 +1,4 @@
-﻿using hitf5.Factorial;
+﻿using HitF5.Factorial;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace hitf5.Api
+namespace HitF5.Api
 {
     public class Startup
     {

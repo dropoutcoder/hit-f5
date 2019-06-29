@@ -1,4 +1,4 @@
-﻿namespace hitf5.Factorial
+﻿namespace HitF5.Factorial
 {
     public interface IFactorialCalculator
     {

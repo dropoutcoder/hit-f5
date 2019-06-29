@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace hitf5.Factorial
+namespace HitF5.Factorial
 {
     [DebuggerDisplay("FactorialCalculator s minimem {minimum}.")]
     public class FactorialCalculator : IFactorialCalculator

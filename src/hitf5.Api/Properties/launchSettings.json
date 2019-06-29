@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "hitf5.Api": {
+    "HitF5.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

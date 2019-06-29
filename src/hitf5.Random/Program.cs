@@ -1,8 +1,8 @@
-﻿using hitf5.Factorial;
+﻿using HitF5.Factorial;
 using System;
 using System.Collections.Generic;
 
-namespace hitf5.Random
+namespace HitF5.Random
 {
     class Program
     {
