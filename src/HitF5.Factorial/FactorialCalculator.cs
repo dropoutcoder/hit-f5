@@ -17,8 +17,6 @@ namespace HitF5.Factorial
             }
             else
             {
-                var aha = new List<int>();
-
                 return value * this.Calculate(this.GetNext(value));
             }
         }
