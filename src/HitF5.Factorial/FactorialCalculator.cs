@@ -11,6 +11,11 @@ namespace HitF5.Factorial
 
         public int Calculate(int value)
         {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
             if (value <= minimum)
             {
                 return minimum;
