@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace HitF5.Factorial
 {
     [DebuggerDisplay("FactorialCalculator s minimem {minimum}.")]
     public class FactorialCalculator : IFactorialCalculator
     {
-        private static readonly int minimum = 1;
-
         public int Calculate(int value)
         {
             if (value < 0)
@@ -16,19 +15,9 @@ namespace HitF5.Factorial
                 throw new ArgumentOutOfRangeException(nameof(value));
             }
 
-            if (value <= minimum)
-            {
-                return minimum;
-            }
-            else
-            {
-                return value * this.Calculate(this.GetNext(value));
-            }
-        }
-
-        private int GetNext(int value)
-        {
-            return value - 1;
+            return Enumerable
+                .Range(1, value)
+                .Aggregate(1, (acc, cur) => acc *= cur);
         }
     }
 }

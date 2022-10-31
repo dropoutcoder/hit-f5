@@ -28,6 +28,7 @@ namespace HitF5.Factorial.Tests
         [TestCase(1, 1)]
         [TestCase(2, 2)]
         [TestCase(3, 6)]
+        [TestCase(10, 10*9*8*7*6*5*4*3*2)]
         public void factorial_of_positive_number_is_calculated_correctly(int value, int expectedResult)
         {
             var result = factorialCalculator.Calculate(value);
