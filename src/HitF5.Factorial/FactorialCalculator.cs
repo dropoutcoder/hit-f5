@@ -1,34 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+using System.Numerics;
 
 namespace HitF5.Factorial
 {
-    [DebuggerDisplay("FactorialCalculator s minimem {minimum}.")]
     public class FactorialCalculator : IFactorialCalculator
     {
-        private static readonly int minimum = 1;
-
-        public int Calculate(int value)
+        public BigInteger Calculate(int value)
         {
-            if (value <= minimum)
+            if (value < 0) throw new ArgumentOutOfRangeException(nameof(value), "Value has to be non-negative.");
+
+            var bi = new BigInteger(1);
+            var factorial = value;
+            for (var i = 1; i <= factorial; i++)
             {
-                return minimum;
+                bi *= i;
             }
-            else
-            {
-                return value * this.Calculate(this.GetNext(value));
-            }
-        }
 
-        private int GetNext(int value)
-        {
-            return value - 1;
-        }
-
-        public override string ToString()
-        {
-            return "ToString";
+            return bi;
         }
     }
 }
