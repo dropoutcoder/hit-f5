@@ -9,6 +9,10 @@ namespace HitF5.Factorial.Tests
     {
         protected static IEnumerable<TestCaseData> FactorialIsCalculatedCorrectlyTestCases()
         {
+            yield return new TestCaseData(0, new BigInteger(1))
+                .SetName("0");
+            yield return new TestCaseData(1, new BigInteger(1))
+                .SetName("1");
             yield return new TestCaseData(2, new BigInteger(2))
                 .SetName("2");
             yield return new TestCaseData(3, new BigInteger(6))
@@ -26,13 +30,12 @@ namespace HitF5.Factorial.Tests
             factorial.ShouldBe(expectedFactorialValue);
         }
 
-        [TestCase(1)]
-        [TestCase(0)]
-        public void factorial_is_calculated_correctly_for_values_less_or_equal_to_one(int value)
+        [Test]
+        public void exception_is_thrown_for_negative_value()
         {
-            var factorial = new FactorialCalculator().Calculate(value);
-        
-            factorial.ShouldBe(1);
+            var ex = Should.Throw<ArgumentOutOfRangeException>(() => new FactorialCalculator().Calculate(-1));
+            
+            ex.Message.ShouldBe("Value has to be non-negative. (Parameter 'value')");
         }
     }
 }

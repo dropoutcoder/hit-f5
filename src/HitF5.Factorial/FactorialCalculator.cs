@@ -1,19 +1,13 @@
-﻿using System.Diagnostics;
+﻿using System;
 using System.Numerics;
 
 namespace HitF5.Factorial
 {
-    [DebuggerDisplay("FactorialCalculator s minimem {Minimum}.")]
     public class FactorialCalculator : IFactorialCalculator
     {
-        private const int Minimum = 1;
-
         public BigInteger Calculate(int value)
         {
-            if (value <= Minimum)
-            {
-                return Minimum;
-            }
+            if (value < 0) throw new ArgumentOutOfRangeException(nameof(value), "Value has to be non-negative.");
 
             var bi = new BigInteger(1);
             var factorial = value;
